@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from typing import Optional, List, Tuple
 
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
@@ -15,10 +16,10 @@ from app.core.logging import logger
 from app.services.embedding import get_embeddings
 
 
-_vectorstore: FAISS | None = None
+_vectorstore: Optional[FAISS] = None
 
 
-def load_vectorstore() -> FAISS | None:
+def load_vectorstore() -> Optional[FAISS]:
     """Load the FAISS index from disk.  Returns *None* if the path is missing."""
     global _vectorstore
     if _vectorstore is not None:
@@ -47,9 +48,9 @@ def is_vectorstore_ready() -> bool:
 
 def retrieve_documents(
     query: str,
-    top_k: int | None = None,
-    score_threshold: float | None = None,
-) -> list[tuple[Document, float]]:
+    top_k: Optional[int] = None,
+    score_threshold: Optional[float] = None,
+) -> List[Tuple[Document, float]]:
     """
     Run similarity search and return (document, score) pairs.
     Lower score = more similar for L2; we normalise so higher = better.
@@ -66,7 +67,7 @@ def retrieve_documents(
     results = store.similarity_search_with_score(query, k=k)
 
     # FAISS returns L2 distance — convert to a 0-1 similarity score
-    scored: list[tuple[Document, float]] = []
+    scored: List[Tuple[Document, float]] = []
     for doc, distance in results:
         similarity = 1.0 / (1.0 + distance)
         if similarity >= threshold:

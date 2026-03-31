@@ -3,6 +3,7 @@ Application configuration loaded from environment variables.
 """
 
 from pydantic_settings import BaseSettings
+from typing import List
 from functools import lru_cache
 
 
@@ -12,7 +13,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "Intelligent Customer Support Agent"
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
-    ALLOWED_ORIGINS: list[str] = ["http://localhost:3000"]
+    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000"]
 
     OPENAI_API_KEY: str
     OPENAI_CHAT_MODEL: str = "gpt-4o-mini"

@@ -4,6 +4,8 @@ Shared utility helpers.
 
 from __future__ import annotations
 
+from typing import List, Dict
+
 import hashlib
 import uuid
 from datetime import datetime
@@ -30,9 +32,8 @@ def truncate(text: str, max_chars: int = 500) -> str:
     return text[: max_chars - 3] + "..."
 
 
-def format_chat_history(history: list[dict]) -> str:
-    """Render a list of {role, content} dicts into a readable transcript."""
-    lines: list[str] = []
+def format_chat_history(history: List[dict]) -> str:
+    lines: List[str] = []
     for msg in history:
         role = msg.get("role", "unknown").capitalize()
         content = msg.get("content", "")
