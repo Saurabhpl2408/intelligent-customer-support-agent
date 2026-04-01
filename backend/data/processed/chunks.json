@@ -1,0 +1,145 @@
+[
+  {
+    "content": "# Company Policies\n\n## Order Processing\n\nOrders are processed within 1-2 business days. Orders placed after 3 PM EST will be processed the next business day. During peak seasons (Black Friday, Cyber Monday, Holiday Season), processing may take up to 3 business days.\n\n## Price Matching",
+    "metadata": {
+      "source": "company_policies.md",
+      "type": "md"
+    }
+  },
+  {
+    "content": "## Price Matching\n\nWe offer price matching within 14 days of purchase. If you find the same item at a lower price from an authorized retailer, contact support with proof and we will refund the difference. Price matching does not apply to marketplace sellers, auction sites, or clearance items.\n\n## Gift Cards",
+    "metadata": {
+      "source": "company_policies.md",
+      "type": "md"
+    }
+  },
+  {
+    "content": "## Gift Cards\n\nGift cards are available in denominations of $25, $50, $100, and $250. They never expire and can be used for any product on our website. Gift cards cannot be redeemed for cash. Lost or stolen gift cards cannot be replaced.\n\n## Loyalty Program",
+    "metadata": {
+      "source": "company_policies.md",
+      "type": "md"
+    }
+  },
+  {
+    "content": "## Loyalty Program\n\nOur rewards program earns 1 point per dollar spent. Accumulate 100 points to receive a $5 reward. Points expire after 12 months of account inactivity. Silver members (500+ points/year) get free express shipping. Gold members (1000+ points/year) get early access to sales and exclusive discounts.\n\n## Privacy Policy Summary",
+    "metadata": {
+      "source": "company_policies.md",
+      "type": "md"
+    }
+  },
+  {
+    "content": "## Privacy Policy Summary\n\nWe collect only the data necessary to process your orders and improve your experience. We never sell personal information to third parties. You can request a copy of your data or deletion of your account at any time through Account Settings.",
+    "metadata": {
+      "source": "company_policies.md",
+      "type": "md"
+    }
+  },
+  {
+    "content": "Q: How do I update my billing information?\nA: Go to Account Settings > Billing > Payment Methods. Click 'Edit' next to your current payment method to update your card details. Changes take effect immediately for future charges.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 0,
+      "category": "billing"
+    }
+  },
+  {
+    "content": "Q: Why was I charged twice?\nA: Duplicate charges are usually temporary authorization holds that drop off within 3-5 business days. If the charge persists, contact support with your order number and we will investigate and process a refund if needed.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 1,
+      "category": "billing"
+    }
+  },
+  {
+    "content": "Q: Can I get an invoice for my purchase?\nA: Yes, invoices are automatically emailed after each purchase. You can also download invoices from My Orders > Order Details > Download Invoice. For business accounts, you can set up automatic monthly invoice generation.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 2,
+      "category": "billing"
+    }
+  },
+  {
+    "content": "Q: Do you ship internationally?\nA: Yes, we ship to over 40 countries. International shipping costs are calculated at checkout based on destination and package weight. Delivery typically takes 10-15 business days. Import duties and taxes are the responsibility of the buyer.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 3,
+      "category": "shipping"
+    }
+  },
+  {
+    "content": "Q: Can I change my shipping address after placing an order?\nA: You can change your shipping address within 2 hours of placing your order by going to My Orders and clicking 'Edit Address'. After 2 hours, contact customer support and we will try to update it if the order has not shipped yet.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 4,
+      "category": "shipping"
+    }
+  },
+  {
+    "content": "Q: How do I start a return?\nA: Go to My Orders, find the order, and click 'Return Item'. Select the items you want to return, choose a reason, and print the prepaid shipping label. Drop the package at any authorized carrier location. Refunds are processed within 5-7 business days after we receive the item.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 5,
+      "category": "returns"
+    }
+  },
+  {
+    "content": "Q: Can I exchange an item instead of returning it?\nA: Yes, we offer direct exchanges for different sizes or colors of the same item. Start a return and select 'Exchange' instead of 'Refund'. The replacement will ship as soon as we receive your return. If the exchange item costs more, you will be charged the difference.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 6,
+      "category": "returns"
+    }
+  },
+  {
+    "content": "Q: How do I delete my account?\nA: Go to Account Settings > Privacy > Delete Account. You will need to confirm your identity via email. Account deletion is permanent and will remove all order history, saved addresses, and payment methods. Any active subscriptions will be cancelled.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 7,
+      "category": "account"
+    }
+  },
+  {
+    "content": "Q: How do I enable two-factor authentication?\nA: Go to Account Settings > Security > Two-Factor Authentication. You can set up 2FA using an authenticator app (recommended) or SMS. Once enabled, you will need to enter a verification code each time you log in from a new device.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 8,
+      "category": "account"
+    }
+  },
+  {
+    "content": "Q: The website is not loading properly, what should I do?\nA: Try clearing your browser cache and cookies, then reload the page. If the issue persists, try a different browser or disable browser extensions. Our website works best on Chrome, Firefox, Safari, and Edge. If you are still having issues, contact support with your browser version and a screenshot.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 9,
+      "category": "technical"
+    }
+  },
+  {
+    "content": "Q: How do I use the mobile app?\nA: Download our app from the App Store (iOS) or Google Play (Android). Sign in with your existing account credentials. The app supports all features available on the website including ordering, tracking, returns, and account management.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 10,
+      "category": "technical"
+    }
+  },
+  {
+    "content": "Q: Are your products eco-friendly?\nA: We are committed to sustainability. Over 60% of our products use recycled materials. All packaging is 100% recyclable. Look for the 'Eco Choice' badge on product pages to identify our most sustainable options. We publish an annual sustainability report on our website.",
+    "metadata": {
+      "source": "faqs.json",
+      "type": "json",
+      "index": 11,
+      "category": "product"
+    }
+  }
+]

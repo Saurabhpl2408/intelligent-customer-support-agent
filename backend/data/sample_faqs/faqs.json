@@ -1,0 +1,64 @@
+{
+    "faqs": [
+      {
+        "category": "billing",
+        "question": "How do I update my billing information?",
+        "answer": "Go to Account Settings > Billing > Payment Methods. Click 'Edit' next to your current payment method to update your card details. Changes take effect immediately for future charges."
+      },
+      {
+        "category": "billing",
+        "question": "Why was I charged twice?",
+        "answer": "Duplicate charges are usually temporary authorization holds that drop off within 3-5 business days. If the charge persists, contact support with your order number and we will investigate and process a refund if needed."
+      },
+      {
+        "category": "billing",
+        "question": "Can I get an invoice for my purchase?",
+        "answer": "Yes, invoices are automatically emailed after each purchase. You can also download invoices from My Orders > Order Details > Download Invoice. For business accounts, you can set up automatic monthly invoice generation."
+      },
+      {
+        "category": "shipping",
+        "question": "Do you ship internationally?",
+        "answer": "Yes, we ship to over 40 countries. International shipping costs are calculated at checkout based on destination and package weight. Delivery typically takes 10-15 business days. Import duties and taxes are the responsibility of the buyer."
+      },
+      {
+        "category": "shipping",
+        "question": "Can I change my shipping address after placing an order?",
+        "answer": "You can change your shipping address within 2 hours of placing your order by going to My Orders and clicking 'Edit Address'. After 2 hours, contact customer support and we will try to update it if the order has not shipped yet."
+      },
+      {
+        "category": "returns",
+        "question": "How do I start a return?",
+        "answer": "Go to My Orders, find the order, and click 'Return Item'. Select the items you want to return, choose a reason, and print the prepaid shipping label. Drop the package at any authorized carrier location. Refunds are processed within 5-7 business days after we receive the item."
+      },
+      {
+        "category": "returns",
+        "question": "Can I exchange an item instead of returning it?",
+        "answer": "Yes, we offer direct exchanges for different sizes or colors of the same item. Start a return and select 'Exchange' instead of 'Refund'. The replacement will ship as soon as we receive your return. If the exchange item costs more, you will be charged the difference."
+      },
+      {
+        "category": "account",
+        "question": "How do I delete my account?",
+        "answer": "Go to Account Settings > Privacy > Delete Account. You will need to confirm your identity via email. Account deletion is permanent and will remove all order history, saved addresses, and payment methods. Any active subscriptions will be cancelled."
+      },
+      {
+        "category": "account",
+        "question": "How do I enable two-factor authentication?",
+        "answer": "Go to Account Settings > Security > Two-Factor Authentication. You can set up 2FA using an authenticator app (recommended) or SMS. Once enabled, you will need to enter a verification code each time you log in from a new device."
+      },
+      {
+        "category": "technical",
+        "question": "The website is not loading properly, what should I do?",
+        "answer": "Try clearing your browser cache and cookies, then reload the page. If the issue persists, try a different browser or disable browser extensions. Our website works best on Chrome, Firefox, Safari, and Edge. If you are still having issues, contact support with your browser version and a screenshot."
+      },
+      {
+        "category": "technical",
+        "question": "How do I use the mobile app?",
+        "answer": "Download our app from the App Store (iOS) or Google Play (Android). Sign in with your existing account credentials. The app supports all features available on the website including ordering, tracking, returns, and account management."
+      },
+      {
+        "category": "product",
+        "question": "Are your products eco-friendly?",
+        "answer": "We are committed to sustainability. Over 60% of our products use recycled materials. All packaging is 100% recyclable. Look for the 'Eco Choice' badge on product pages to identify our most sustainable options. We publish an annual sustainability report on our website."
+      }
+    ]
+  }
