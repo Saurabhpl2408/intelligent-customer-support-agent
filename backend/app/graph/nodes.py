@@ -14,10 +14,6 @@ from app.models.schemas import ConversationStatus
 from app.services.rag_pipeline import run_rag_pipeline
 
 
-# ------------------------------------------------------------------ #
-#  Node 1 — classify the customer intent
-# ------------------------------------------------------------------ #
-
 def classify_node(state: AgentState) -> dict:
     logger.info("[node] classify — session=%s", state["session_id"])
     intent = classify_intent(state["message"])

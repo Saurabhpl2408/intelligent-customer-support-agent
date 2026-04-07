@@ -66,7 +66,6 @@ def retrieve_documents(
 
     results = store.similarity_search_with_score(query, k=k)
 
-    # FAISS returns L2 distance — convert to a 0-1 similarity score
     scored: List[Tuple[Document, float]] = []
     for doc, distance in results:
         similarity = 1.0 / (1.0 + distance)

@@ -28,17 +28,11 @@ from langchain_community.vectorstores import FAISS
 
 from app.core.config import get_settings
 
-# ------------------------------------------------------------------ #
-#  Paths
-# ------------------------------------------------------------------ #
 
 CHUNKS_PATH = Path("data/processed/chunks.json")
 INDEX_DIR = Path("vectorstore/faiss_index")
 
 
-# ------------------------------------------------------------------ #
-#  Built-in sample FAQs (fallback when no files exist)
-# ------------------------------------------------------------------ #
 
 SAMPLE_DOCS = [
     Document(
@@ -95,9 +89,6 @@ SAMPLE_DOCS = [
 ]
 
 
-# ------------------------------------------------------------------ #
-#  Loaders
-# ------------------------------------------------------------------ #
 
 def load_from_chunks_json() -> List[Document]:
     """Load processed chunks from the ingestion pipeline output."""
@@ -117,9 +108,6 @@ def load_from_chunks_json() -> List[Document]:
     return docs
 
 
-# ------------------------------------------------------------------ #
-#  Index builder
-# ------------------------------------------------------------------ #
 
 def build_faiss_index(documents: List[Document]) -> FAISS:
     """Embed documents and build a FAISS index."""
@@ -143,10 +131,6 @@ def save_index(store: FAISS) -> None:
     store.save_local(str(INDEX_DIR))
     print(f"FAISS index saved to {INDEX_DIR}/ ({store.index.ntotal} vectors)")
 
-
-# ------------------------------------------------------------------ #
-#  Main
-# ------------------------------------------------------------------ #
 
 def main():
     parser = argparse.ArgumentParser(description="Build the FAISS vector index")
@@ -175,7 +159,6 @@ def main():
     store = build_faiss_index(documents)
     save_index(store)
 
-    # Quick verification
     print("\n--- Verification ---")
     test_query = "How do I get a refund?"
     results = store.similarity_search_with_score(test_query, k=3)

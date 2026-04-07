@@ -26,18 +26,13 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 from app.core.config import get_settings
 
-# ------------------------------------------------------------------ #
-#  Config
-# ------------------------------------------------------------------ #
 
 RAW_DIR = Path("data/raw")
 PROCESSED_DIR = Path("data/processed")
 SAMPLE_FAQ_DIR = Path("data/sample_faqs")
 
 
-# ------------------------------------------------------------------ #
-#  Loaders — one per file type
-# ------------------------------------------------------------------ #
+
 
 def load_txt(path: Path) -> List[Document]:
     text = path.read_text(encoding="utf-8")
@@ -110,9 +105,7 @@ LOADERS = {
 }
 
 
-# ------------------------------------------------------------------ #
-#  Chunking
-# ------------------------------------------------------------------ #
+
 
 def chunk_documents(docs: List[Document]) -> List[Document]:
     settings = get_settings()
@@ -127,9 +120,6 @@ def chunk_documents(docs: List[Document]) -> List[Document]:
     return chunks
 
 
-# ------------------------------------------------------------------ #
-#  Main
-# ------------------------------------------------------------------ #
 
 def ingest_directory(directory: Path) -> List[Document]:
     """Load and chunk all supported files from a directory."""
@@ -182,14 +172,12 @@ def main():
 
     all_chunks = []
 
-    # Ingest from data/raw/
     print(f"\n[1/2] Loading from {RAW_DIR}/")
     raw_docs = ingest_directory(RAW_DIR)
     if raw_docs:
         raw_chunks = chunk_documents(raw_docs)
         all_chunks.extend(raw_chunks)
 
-    # Ingest from data/sample_faqs/
     print(f"\n[2/2] Loading from {SAMPLE_FAQ_DIR}/")
     faq_docs = ingest_directory(SAMPLE_FAQ_DIR)
     if faq_docs:
@@ -201,7 +189,6 @@ def main():
         print("Supported formats: .txt, .md, .csv, .json")
         return
 
-    # Save processed output
     print(f"\nTotal chunks: {len(all_chunks)}")
     save_processed(all_chunks, PROCESSED_DIR / "chunks.json")
 

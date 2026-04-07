@@ -26,7 +26,6 @@ export default function Home() {
   const [isEscalated, setIsEscalated] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll to bottom on new messages
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -46,7 +45,6 @@ export default function Home() {
       setMessages((prev) => [...prev, { message: userMsg }]);
       setIsLoading(true);
 
-      // Build history from existing messages (only role + content for the API)
       const history: ChatMessage[] = messages.map((m) => ({
         role: m.message.role,
         content: m.message.content,
@@ -96,7 +94,6 @@ export default function Home() {
     <div className="h-screen flex flex-col bg-surface-primary">
       <ChatHeader />
 
-      {/* Messages area */}
       <div ref={scrollRef} className="flex-1 overflow-y-auto">
         {messages.length === 0 && !isLoading ? (
           <WelcomeScreen onSuggestionClick={handleSend} />
@@ -117,10 +114,8 @@ export default function Home() {
         )}
       </div>
 
-      {/* Escalation banner */}
       {isEscalated && <EscalationBanner />}
 
-      {/* Input */}
       <ChatInput onSend={handleSend} disabled={isLoading || isEscalated} />
     </div>
   );

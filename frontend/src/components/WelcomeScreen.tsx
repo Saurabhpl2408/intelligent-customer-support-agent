@@ -14,7 +14,6 @@ const suggestions = [
 export default function WelcomeScreen({ onSuggestionClick }: Props) {
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-6 animate-fade-in">
-      {/* Hero */}
       <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center mb-6 shadow-2xl shadow-brand-500/20">
         <svg
           width="28"
@@ -38,7 +37,6 @@ export default function WelcomeScreen({ onSuggestionClick }: Props) {
         returns, account issues, and more.
       </p>
 
-      {/* Suggestions */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-lg">
         {suggestions.map((s, idx) => (
           <button

@@ -29,9 +29,7 @@ from app.agents.response_generator import generate_response
 from app.services.rag_pipeline import run_rag_pipeline
 
 
-# ------------------------------------------------------------------ #
-#  Test Cases
-# ------------------------------------------------------------------ #
+
 
 INTENT_TEST_CASES = [
     {"message": "How do I get a refund?", "expected": "refund_request"},
@@ -115,9 +113,6 @@ E2E_TEST_CASES = [
 ]
 
 
-# ------------------------------------------------------------------ #
-#  Result tracking
-# ------------------------------------------------------------------ #
 
 @dataclass
 class TestResult:
@@ -129,9 +124,7 @@ class TestResult:
     latency_ms: float = 0.0
 
 
-# ------------------------------------------------------------------ #
-#  Evaluators
-# ------------------------------------------------------------------ #
+
 
 def eval_intent_classification() -> List[TestResult]:
     """Test intent classification accuracy."""
@@ -189,7 +182,6 @@ def eval_retrieval_relevance() -> List[TestResult]:
             passed = top_source == tc["expected_source"]
 
             all_sources = [d[0].metadata.get("source", "?") for d, _ in docs] if docs else []
-            # Check if expected source is anywhere in top 3
             in_top3 = tc["expected_source"] in [d[0].metadata.get("source", "") for d in [pair[0] for pair in docs]]
 
             result = TestResult(
@@ -218,7 +210,6 @@ def eval_e2e_responses() -> List[TestResult]:
     for tc in E2E_TEST_CASES:
         start = time.time()
 
-        # Run the RAG pipeline
         rag_result = run_rag_pipeline(tc["message"])
         reply = generate_response(
             question=tc["message"],
@@ -229,10 +220,8 @@ def eval_e2e_responses() -> List[TestResult]:
 
         reply_lower = reply.lower()
 
-        # Check must_contain (any match counts)
         contains_ok = any(kw.lower() in reply_lower for kw in tc["must_contain"]) if tc["must_contain"] else True
 
-        # Check must_not_contain
         not_contains_ok = all(kw.lower() not in reply_lower for kw in tc["must_not_contain"]) if tc["must_not_contain"] else True
 
         passed = contains_ok and not_contains_ok
@@ -261,9 +250,6 @@ def eval_e2e_responses() -> List[TestResult]:
     return results
 
 
-# ------------------------------------------------------------------ #
-#  Summary
-# ------------------------------------------------------------------ #
 
 def print_summary(all_results: List[TestResult]) -> None:
     print("\n" + "=" * 60)
@@ -290,7 +276,6 @@ def print_summary(all_results: List[TestResult]) -> None:
                 if r.details:
                     print(f"      Details:  {r.details}")
 
-    # Save results to file
     output_path = Path("data/processed/eval_results.json")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
@@ -300,10 +285,6 @@ def print_summary(all_results: List[TestResult]) -> None:
     print(f"\n  Results saved to {output_path}")
 
 
-# ------------------------------------------------------------------ #
-#  Main
-# ------------------------------------------------------------------ #
-
 def main():
     parser = argparse.ArgumentParser(description="Evaluate the chatbot")
     parser.add_argument("--intents", action="store_true", help="Run intent classification eval")
@@ -311,7 +292,6 @@ def main():
     parser.add_argument("--e2e", action="store_true", help="Run end-to-end eval")
     args = parser.parse_args()
 
-    # If no flags, run all
     run_all = not (args.intents or args.retrieval or args.e2e)
 
     all_results = []
